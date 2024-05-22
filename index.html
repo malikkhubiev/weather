@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="jquery-3.7.1.min.js"></script> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap">
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            outline: none;
+            border: 0;
+        }
+
+        body {
+            height: 100vh;
+            background-color: #06283d;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: "Lato" sans-serif;
+        }
+
+        .container {
+            background-color: white;
+            width: 500px;
+            height: auto;
+            padding: 28px 32px;
+            overflow: hidden;
+            border-radius: 18px;
+            transition: 0.6s ease-out;
+        }
+
+        .search-box {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            columns: #06283d;
+            position: relative;
+        }
+
+        .search-box input {
+            color: #06283d;
+            width: 80%;
+            font-size: 24px;
+            font-weight: 400;
+            text-transform: uppercase;
+            padding-left: 32px;
+        }
+
+        .search-box input::placeholder {
+            color: #06283d;
+            font-weight: 400;
+            font-size: 20px;
+            text-transform: capitalize;
+        }
+
+        .search-box button {
+            cursor: pointer;
+            width: 50px;
+            height: 50px;
+            background-color: #dff6ff;
+            border-radius: 50%;
+            font-size: 22px;
+        }
+
+        .search-box button {
+            color: #fff;
+            background-color: #06283d;
+        }
+
+        .fa-location-dot {
+            position: absolute;
+            color: #06283d;
+            font-size: 28px;
+        }
+
+        .weather {
+            margin-top: 30px;
+            text-align: center;
+            display: none;
+        }
+
+        .weather h1 {
+            font-size: 80px;
+            font-weight: 700;
+        }
+
+        .weather h2 {
+            font-size: 55px;
+            font-weight: 500;
+            margin-top: 20px;
+        }
+
+        .deatils {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+        }
+
+        .deatils i {
+            font-size: 80px;
+        }
+
+        .deatils p {
+            font-size: 28px;
+        }
+
+        .weather-image i {
+            font-size: 120px;
+        }
+
+        .error {
+            color: red;
+            text-align: left;
+            margin-top: 20px;
+            display: none;
+            font-size: 30px;
+        }
+
+
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="search-box">
+            <i class="fa-solid fa-location-dot"></i>
+            <input type="text" placeholder="Enter your location">
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+        <div class="error">
+            <p>Invalid city name</p>
+        </div>
+        <div class="weather">
+            <div class="weather-image">
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h1 class="temp"> 22 &#8451;</h1>
+            <h2 class="city"> Berlin</h2>
+            <div class="deatils">
+                <div class="col">
+                    <i class="fa-solid fa-water"></i>
+                    <div>
+                        <p class="humidity">50%</p>
+                        <p>Humidity</p>
+                    </div>
+                </div>
+                <div class="col">
+                    <i class="fa-solid fa-wind"></i>
+                    <div>
+                        <p class="wind">15 km/h</p>
+                        <p>Wind speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+
+</html>
